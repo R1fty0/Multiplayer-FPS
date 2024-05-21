@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://liaa3wlcl57c"]
 
-[ext_resource type="Texture2D" uid="uid://bvbiipeulwo01" path="res://assets/weapon_models/pistol_Atlas_Pirate.png" id="1_x0ffx"]
+[ext_resource type="Texture2D" uid="uid://bvbiipeulwo01" path="res://assets/models/old_weapon_models/pistol_Atlas_Pirate.png" id="1_x0ffx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r5jat"]
 resource_name = "Atlas"

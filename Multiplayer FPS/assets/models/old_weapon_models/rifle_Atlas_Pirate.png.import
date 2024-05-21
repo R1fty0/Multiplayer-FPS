@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4102f2ubl84y"
-path.s3tc="res://.godot/imported/rifle_Atlas_Pirate.png-d85659cac0d2cb91390878fd2be5ef2b.s3tc.ctex"
+path.s3tc="res://.godot/imported/rifle_Atlas_Pirate.png-39906a5c58a102e645e2ea8b685d7da6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/weapon_models/rifle_Atlas_Pirate.png"
-dest_files=["res://.godot/imported/rifle_Atlas_Pirate.png-d85659cac0d2cb91390878fd2be5ef2b.s3tc.ctex"]
+source_file="res://assets/models/old_weapon_models/rifle_Atlas_Pirate.png"
+dest_files=["res://.godot/imported/rifle_Atlas_Pirate.png-39906a5c58a102e645e2ea8b685d7da6.s3tc.ctex"]
 
 [params]
 

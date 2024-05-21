@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bn3vflk5pbdke"
-path="res://.godot/imported/rifle.glb-f7db9f969c0085ad31e31639a2d12d32.scn"
+uid="uid://b40uti3jref5f"
+path="res://.godot/imported/molotov.glb-2661eb89db6d657e5e1cc8712246c212.scn"
 
 [deps]
 
-source_file="res://assets/weapon_models/rifle.glb"
-dest_files=["res://.godot/imported/rifle.glb-f7db9f969c0085ad31e31639a2d12d32.scn"]
+source_file="res://assets/models/grenade_models/molotov.glb"
+dest_files=["res://.godot/imported/molotov.glb-2661eb89db6d657e5e1cc8712246c212.scn"]
 
 [params]
 
