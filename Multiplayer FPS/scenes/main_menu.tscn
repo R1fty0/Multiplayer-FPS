@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd7mmpbh0il4v"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_te8x8"]
+[ext_resource type="FontFile" uid="uid://bv21dxe2argmn" path="res://assets/fonts/raleway/static/Raleway-Black.ttf" id="1_ufm4o"]
+[ext_resource type="FontFile" uid="uid://beuvrc7u76fd" path="res://assets/fonts/raleway/static/Raleway-MediumItalic.ttf" id="2_853hm"]
+[ext_resource type="FontFile" uid="uid://c5kiih3tbylbi" path="res://assets/fonts/raleway/static/Raleway-Medium.ttf" id="3_6ndx3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_buwq1"]
+font = ExtResource("1_ufm4o")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_aras2"]
+font = ExtResource("3_6ndx3")
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_te8x8")
+
+[node name="TempBackground" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.0980392, 0.439216, 1)
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="HostButton" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -114.0
+offset_right = 136.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_853hm")
+theme_override_font_sizes/font_size = 36
+text = "Host New Game"
+
+[node name="JoinButton" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -30.0
+offset_right = 158.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_853hm")
+theme_override_font_sizes/font_size = 36
+text = "Join Existing Game
+"
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = 49.0
+offset_right = 133.5
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_853hm")
+theme_override_font_sizes/font_size = 36
+text = "Quit To Desktop
+"
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="GameNameLabel" type="Label" parent="Labels"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -193.0
+offset_right = 169.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Robot Rumble"
+label_settings = SubResource("LabelSettings_buwq1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MakerLabel" type="Label" parent="Labels"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 144.0
+grow_vertical = 0
+text = "Made By Mohit Sah"
+label_settings = SubResource("LabelSettings_aras2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Buttons/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="Buttons/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]

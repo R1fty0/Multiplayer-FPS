@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
 # Reference to camera 
-@onready var camera = $camera
+@onready var camera = %Camera
+
 
 # Mouse sensitivity
 const MOUSE_SENS: float = 0.001

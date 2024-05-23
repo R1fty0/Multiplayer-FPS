@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Multiplayer FPS"
-run/main_scene="res://scenes/map_base.tscn"
+config/name="Robot Rumble"
+run/main_scene="res://scenes/demo.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [file_customization]
 
