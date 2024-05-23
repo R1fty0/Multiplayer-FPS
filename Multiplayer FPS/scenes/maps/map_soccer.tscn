@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://djjximryxods1"]
+[gd_scene load_steps=48 format=3 uid="uid://djjximryxods1"]
 
 [ext_resource type="Texture2D" uid="uid://de0xpxxx1sjjg" path="res://assets/models/soccer_gamemode/ball/Ball_white.jpg" id="2_0rdov"]
 [ext_resource type="Texture2D" uid="uid://bkgexhfhxv4uh" path="res://assets/models/soccer_gamemode/ball/Ball_black.jpg" id="3_kimbh"]
@@ -24,7 +24,6 @@ emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr75q"]
 resource_name = "mat21"
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wgj68"]
@@ -80,11 +79,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wgj68")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j04hw"]
-size = Vector3(1.40454, 0.269165, 0.664429)
+size = Vector3(1.40454, 0.257984, 0.664429)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwtqd"]
 resource_name = "white"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_0rdov")
 roughness = 0.903922
 emission_enabled = true
@@ -92,7 +90,6 @@ texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywq8f"]
 resource_name = "black"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_kimbh")
 roughness = 0.903922
 emission_enabled = true
@@ -156,7 +153,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_smxv2")
 
-[sub_resource type="Image" id="Image_oh3k0"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_0aqou"]
+radius = 0.704621
+
+[sub_resource type="Image" id="Image_ojssx"]
 data = {
 "data": PackedByteArray(223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223),
 "format": "RGB8",
@@ -166,9 +166,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_jojqg"]
-image = SubResource("Image_oh3k0")
+image = SubResource("Image_ojssx")
 
-[sub_resource type="Image" id="Image_weys6"]
+[sub_resource type="Image" id="Image_r6nm0"]
 data = {
 "data": PackedByteArray(255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255),
 "format": "RGBA8",
@@ -178,12 +178,11 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_r2si0"]
-image = SubResource("Image_weys6")
+image = SubResource("Image_r6nm0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agflh"]
 resource_name = "material"
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = SubResource("ImageTexture_jojqg")
 metallic = 1.0
 roughness_texture = SubResource("ImageTexture_r2si0")
@@ -227,7 +226,6 @@ shadow_mesh = SubResource("ArrayMesh_ffaxj")
 resource_name = "material_1"
 transparency = 4
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("5_t0jmj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_23kdm"]
@@ -262,7 +260,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_23kdm")
 
-[sub_resource type="Image" id="Image_vlyto"]
+[sub_resource type="Image" id="Image_j7bo8"]
 data = {
 "data": PackedByteArray(223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 222, 222, 222, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223, 223),
 "format": "RGB8",
@@ -272,9 +270,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_alwqx"]
-image = SubResource("Image_vlyto")
+image = SubResource("Image_j7bo8")
 
-[sub_resource type="Image" id="Image_2oj8y"]
+[sub_resource type="Image" id="Image_yk3bf"]
 data = {
 "data": PackedByteArray(255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255, 255, 153, 0, 255),
 "format": "RGBA8",
@@ -284,12 +282,11 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_7aofe"]
-image = SubResource("Image_2oj8y")
+image = SubResource("Image_yk3bf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1himx"]
 resource_name = "material_2"
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = SubResource("ImageTexture_alwqx")
 metallic = 1.0
 roughness_texture = SubResource("ImageTexture_7aofe")
@@ -333,7 +330,6 @@ shadow_mesh = SubResource("ArrayMesh_8fu1g")
 resource_name = "material_3"
 transparency = 4
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("5_t0jmj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pbyn2"]
@@ -372,7 +368,6 @@ shadow_mesh = SubResource("ArrayMesh_pbyn2")
 resource_name = "material_4"
 transparency = 4
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("5_t0jmj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a3vpc"]
@@ -445,7 +440,6 @@ shadow_mesh = SubResource("ArrayMesh_js1xh")
 resource_name = "material_5"
 transparency = 4
 cull_mode = 2
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("5_t0jmj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8tad8"]
@@ -505,18 +499,25 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Field"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Field/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00646973, -0.0950584, 0.0169067)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00635268, -0.0956312, 0.0169198)
 shape = SubResource("BoxShape3D_j04hw")
 
 [node name="Ball" type="Node3D" parent="."]
-transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 0.0508723, 0.234285, -0.702255)
+transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 0.0508723, 0.356431, -0.702255)
 
-[node name="Icosphere_Icosphere_006" type="MeshInstance3D" parent="Ball"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Mesh" type="MeshInstance3D" parent="Ball"]
 mesh = SubResource("ArrayMesh_uy50i")
 skeleton = NodePath("")
 
+[node name="RigidBody3D" type="RigidBody3D" parent="Ball"]
+mass = 0.01
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball/RigidBody3D"]
+shape = SubResource("SphereShape3D_0aqou")
+
 [node name="Player" parent="." instance=ExtResource("4_j5npo")]
+collision_layer = 1
+collision_mask = 1
 
 [node name="Goal 1" type="Node3D" parent="."]
 transform = Transform3D(-9.9662e-08, 0, 2.28, 0, 2.28, 0, -2.28, 0, -9.9662e-08, -9.73967, 0.657311, -0.000300407)

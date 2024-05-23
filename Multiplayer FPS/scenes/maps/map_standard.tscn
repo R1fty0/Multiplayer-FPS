@@ -74,7 +74,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5icpi")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wffjh"]
-height = 0.105083
+height = 0.131696
 radius = 0.423559
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3ajkg"]
@@ -93,6 +93,7 @@ tonemap_mode = 2
 script = ExtResource("1_yjnvc")
 
 [node name="Island" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4103, 0)
 
 [node name="island_mesh" type="MeshInstance3D" parent="Island"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -10, 0)
