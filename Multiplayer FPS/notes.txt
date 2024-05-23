@@ -1,0 +1,13 @@
+Game Modes:
+	- Standard (FFA)
+	- Soccer (Two teams)
+	- Capture the Flag (Choice between two teams and FFA)
+	- Hot Potato (FFA) * if time permits
+	
+Players: 2 (min) - 10 (max)
+
+Settings:
+	- sound volume
+	- sens
+	- movement, punch, jumping, interaction keybinds 
+	

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://d3q04lseu7bfl"]
 
-[ext_resource type="PackedScene" uid="uid://d34rocppudyrd" path="res://scenes/player.tscn" id="1_bx00k"]
-[ext_resource type="Script" path="res://scripts/map_base.gd" id="1_c8203"]
+[ext_resource type="Script" path="res://scripts/map_base.gd" id="1_yjnvc"]
+[ext_resource type="PackedScene" uid="uid://d34rocppudyrd" path="res://scenes/player.tscn" id="2_p3ntf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nyik"]
 resource_name = "Dirt"
@@ -89,8 +89,8 @@ background_mode = 2
 sky = SubResource("Sky_j40yq")
 tonemap_mode = 2
 
-[node name="Demo" type="Node3D"]
-script = ExtResource("1_c8203")
+[node name="Map_Standard" type="Node3D"]
+script = ExtResource("1_yjnvc")
 
 [node name="Island" type="Node3D" parent="."]
 
@@ -115,4 +115,4 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_fbeyl")
 
-[node name="Player" parent="." instance=ExtResource("1_bx00k")]
+[node name="Player" parent="." instance=ExtResource("2_p3ntf")]
