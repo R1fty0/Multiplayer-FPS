@@ -1,57 +1,91 @@
 extends CharacterBody3D
 
-# Reference to camera 
-@onready var camera = %Camera
+@export_category("Movement")
+@export var walk_speed = 3.0
+@export var run_speed = 8.0
+@export var jump_velocity = 4.5
+@export var deacceleration_speed = 5.0
+@export var gravity = 9.81
 
+@export_category("Camera")
+@export var sensitivity = 0.25
+@export var max_view_angle = 45
+@export var min_view_angle = -90
 
-# Mouse sensitivity
-const MOUSE_SENS: float = 0.001
+@export_category("References")
+@export var pivot: Marker3D
+@export var anim_controller: AnimationController
 
-const SPEED = 5.5
-const JUMP_VELOCITY = 4.5
-
-# Camera view limits 
-const UPPER_VIEW_LIMIT: float = PI/2
-const LOWER_VIEW_LIMIT: float = -PI/2
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var is_walking: bool = false
+var current_speed: float = 0.0
 
 func _ready():
-	# Lock the mouse 
+	# Lock mouse 
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _unhandled_input(event):
+func _input(event):
 	if event is InputEventMouseMotion:
-		# Rotate player on y-axis
-		rotate_y(-event.relative.x * MOUSE_SENS)
-		# Rotate camera on x-axis 
-		camera.rotate_x(-event.relative.y * MOUSE_SENS)
-		# Limit camera angles 
-		camera.rotation.x = clamp(camera.rotation.x, LOWER_VIEW_LIMIT, UPPER_VIEW_LIMIT) 
+		# Rotate camera and player based off of mouse motion
+		rotate_y(deg_to_rad(-event.relative.x * sensitivity))
+		pivot.rotate_x(deg_to_rad(-event.relative.y * sensitivity))
+		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(min_view_angle), deg_to_rad(max_view_angle))
 	
-func _physics_process(delta):
-	move()
-	jump(delta)
-
-# Handle WASD movement 
-func move():
-	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	# Toggle sprinting 
+	if event.is_action_pressed("run"):
+		if is_walking:
+			is_walking = false
+		elif !is_walking:
+			is_walking = true
+			
+	# Punching 
+	if event.is_action_pressed("punch"):
+		print("Punch")
+		anim_controller.set_anim_state(anim_controller.AnimationState.PUNCHING)
+	
+	# Quit game.
+	if event.is_action_pressed("quit"):
+		get_tree().quit()
+	
+	
 		
-	move_and_slide()
-	
-# Handle jumping 
-func jump(delta):
-	# Gravity
+func _physics_process(delta):
+	movement()
+	jumping(delta)
+		
+func jumping(delta):
+	# Apply Gravity To Player.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	# Jump
+	
+	# Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
+		anim_controller.set_anim_state(anim_controller.AnimationState.JUMPING)
+
+func movement():
+	# Get movement direction 
+	var input_dir = Input.get_vector("left", "right", "forward", "backward")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	# Move player.
+	if direction:
+		if is_walking:
+			current_speed = walk_speed
+			anim_controller.set_anim_state(anim_controller.AnimationState.WALKING)
+		else:
+			current_speed = run_speed
+			anim_controller.set_anim_state(anim_controller.AnimationState.RUNNING)
+				
+		velocity.x = direction.x * current_speed
+		velocity.z = direction.z * current_speed
+	
+	# Bring player to stop.
+	else:
+		velocity.x = move_toward(velocity.x, 0, deacceleration_speed)
+		velocity.z = move_toward(velocity.z, 0, deacceleration_speed)
+	
+	if velocity.length() == 0.0:
+		anim_controller.set_anim_state(anim_controller.AnimationState.IDLE)
+		
+	# Apply movement
+	move_and_slide()

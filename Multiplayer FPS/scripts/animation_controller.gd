@@ -15,6 +15,7 @@ enum AnimationState
 
 func set_anim_state(new_state: AnimationState):
 	anim_state = new_state
+	
 
 func _process(delta):
 	match anim_state:
@@ -28,3 +29,4 @@ func _process(delta):
 			anim_player.play("RobotArmature|Robot_Jump")
 		AnimationState.PUNCHING:
 			anim_player.play("RobotArmature|Robot_Punch")
+	print(anim_state)
