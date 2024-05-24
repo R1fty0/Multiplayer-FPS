@@ -5,7 +5,6 @@ extends CharacterBody3D
 @export var run_speed = 8.0
 @export var jump_velocity = 4.5
 @export var deacceleration_speed = 5.0
-@export var gravity = 9.81
 
 @export_category("Camera")
 @export var sensitivity = 0.25
@@ -16,6 +15,9 @@ extends CharacterBody3D
 @export var pivot: Marker3D
 @export var anim_controller: AnimationController
 
+@export_category("Physics")
+@export var gravity = 9.81
+@export var push_force = 1.5
 var is_walking: bool = false
 var current_speed: float = 0.0
 
@@ -45,7 +47,6 @@ func _input(event):
 	# Quit game.
 	if event.is_action_pressed("quit"):
 		get_tree().quit()
-	
 	
 		
 func _physics_process(delta):
@@ -89,3 +90,12 @@ func movement():
 		
 	# Apply movement
 	move_and_slide()
+	
+	# Handle collision with ball 
+	collide_with_ball()
+	
+func collide_with_ball():
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody3D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)

@@ -3696,8 +3696,6 @@ radius = 0.19149
 height = 0.791657
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("pivot", "anim_controller")]
-collision_layer = 2
-collision_mask = 3
 script = ExtResource("1_ptece")
 pivot = NodePath("CameraPivot")
 anim_controller = NodePath("AnimationController")
@@ -3744,7 +3742,7 @@ bones/4/parent = 0
 bones/4/rest = Transform3D(1, -3.75568e-30, 2.38419e-07, 3.75568e-30, 1, 8.95423e-37, -2.38419e-07, 0, 1, 5.2459e-05, 0.0141397, 0.0030772)
 bones/4/enabled = true
 bones/4/position = Vector3(5.2459e-05, 0.0141397, 0.0030772)
-bones/4/rotation = Quaternion(9.26062e-37, 1.19209e-07, -7.76838e-30, 1)
+bones/4/rotation = Quaternion(9.26063e-37, 1.19209e-07, -7.76838e-30, 1)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "Torso"
 bones/5/parent = 4
@@ -3821,7 +3819,7 @@ bones/15/parent = 13
 bones/15/rest = Transform3D(0.0385321, -0.0241486, -0.998966, 0.174781, 0.98446, -0.0170563, 0.983853, -0.173942, 0.042154, -2.4451e-10, 0.000840358, 5.19549e-13)
 bones/15/enabled = true
 bones/15/position = Vector3(-2.4451e-10, 0.000840358, 5.19549e-13)
-bones/15/rotation = Quaternion(-0.0545857, -0.689887, 0.0692139, 0.718531)
+bones/15/rotation = Quaternion(-0.0545858, -0.689887, 0.0692138, 0.718531)
 bones/15/scale = Vector3(1, 1, 1)
 bones/16/name = "Arm.L"
 bones/16/parent = 15
@@ -3961,7 +3959,7 @@ bones/35/parent = 33
 bones/35/rest = Transform3D(-0.301273, 0.00235192, 0.953535, 0.137876, 0.989595, 0.0411217, -0.943517, 0.143858, -0.298463, 2.15339e-10, 0.00102178, 9.40702e-12)
 bones/35/enabled = true
 bones/35/position = Vector3(2.15339e-10, 0.00102178, 9.40702e-12)
-bones/35/rotation = Quaternion(0.0435723, 0.80457, 0.0574779, 0.589462)
+bones/35/rotation = Quaternion(0.0435723, 0.80457, 0.0574779, 0.589461)
 bones/35/scale = Vector3(1, 1, 1)
 bones/36/name = "Arm.R"
 bones/36/parent = 35
@@ -3975,7 +3973,7 @@ bones/37/parent = 35
 bones/37/rest = Transform3D(-0.124277, -0.460897, -0.878709, 0.20785, 0.853835, -0.477247, 0.970234, -0.241951, -0.0103148, -3.72529e-10, 0.00575238, 9.31323e-11)
 bones/37/enabled = true
 bones/37/position = Vector3(-3.72529e-10, 0.00575238, 9.31323e-11)
-bones/37/rotation = Quaternion(0.0897254, -0.705058, 0.255014, 0.655599)
+bones/37/rotation = Quaternion(0.0897254, -0.705058, 0.255014, 0.6556)
 bones/37/scale = Vector3(1, 1, 1)
 bones/38/name = "Palm2.R"
 bones/38/parent = 37
@@ -4171,7 +4169,7 @@ bones/65/parent = 0
 bones/65/rest = Transform3D(-1, -1.81327e-07, 1.57646e-06, 1.58151e-06, -0.0324215, 0.999474, -1.3012e-07, 0.999475, 0.0324215, -0.00636881, 0.000305792, 0.00057014)
 bones/65/enabled = true
 bones/65/position = Vector3(-0.00636881, 0.000305792, 0.00057014)
-bones/65/rotation = Quaternion(5.08964e-07, 0.69555, 0.718478, 6.19279e-07)
+bones/65/rotation = Quaternion(5.03264e-07, 0.69555, 0.718478, 6.13392e-07)
 bones/65/scale = Vector3(1, 1, 1)
 bones/66/name = "Foot.R_2"
 bones/66/parent = 65
@@ -4212,7 +4210,7 @@ mesh = SubResource("ArrayMesh_mh4rg")
 skeleton = NodePath("")
 
 [node name="Torso" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(1, 5.93445e-11, -5.80087e-11, -5.93445e-11, 1, -4.1491e-17, 5.80087e-11, -7.40941e-36, 1, -2.71563e-05, 0.00019581, 0.0220934)
+transform = Transform3D(1, 5.93445e-11, -5.80087e-11, -5.93445e-11, 1, -4.1491e-17, 5.80087e-11, -7.4094e-36, 1, -2.71563e-05, 0.00019581, 0.0220934)
 bone_name = "Torso"
 bone_idx = 5
 
@@ -4239,7 +4237,7 @@ mesh = SubResource("ArrayMesh_v1fkb")
 skeleton = NodePath("")
 
 [node name="Arm_L" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.435433, -0.00201559, 0.900219, 0.233061, 0.966156, -0.110568, -0.869529, 0.257951, 0.421166, 0.00265002, -0.00130694, 0.0288456)
+transform = Transform3D(0.435433, -0.00201552, 0.900219, 0.233061, 0.966156, -0.110568, -0.869529, 0.257951, 0.421166, 0.00265002, -0.00130694, 0.0288456)
 bone_name = "Arm.L"
 bone_idx = 16
 
@@ -4257,7 +4255,7 @@ mesh = SubResource("ArrayMesh_pygry")
 skeleton = NodePath("")
 
 [node name="Arm_R" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.101816, -1.41561e-07, -0.202931, 0.0178378, 0.226162, 0.00894956, 0.202146, -0.019957, 0.101422, -0.0082569, -0.000402433, 0.0201812)
+transform = Transform3D(0.101816, 1.86265e-07, -0.202931, 0.0178378, 0.226162, 0.00894992, 0.202146, -0.0199572, 0.101422, -0.0082569, -0.000402434, 0.0201812)
 bone_name = "Arm.R"
 bone_idx = 36
 
@@ -4275,7 +4273,7 @@ mesh = SubResource("ArrayMesh_k3a4f")
 skeleton = NodePath("")
 
 [node name="LowerLeg_L_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.984156, -0.177236, 0.00489863, 0.177099, 0.981346, -0.0749514, 0.00847667, 0.0746187, 0.997178, 0.0068437, -0.00214599, 0.00371967)
+transform = Transform3D(0.984156, -0.177236, 0.00489873, 0.177099, 0.981346, -0.074952, 0.00847667, 0.0746192, 0.997178, 0.0068437, -0.00214598, 0.00371967)
 bone_name = "LowerLeg.L_2"
 bone_idx = 56
 
@@ -4293,7 +4291,7 @@ mesh = SubResource("ArrayMesh_egxox")
 skeleton = NodePath("")
 
 [node name="LowerLeg_R_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.962589, 0.270827, -0.00860265, -0.270697, 0.959728, -0.0750251, -0.0120627, 0.0745326, 0.997147, -0.00730423, -0.00206399, 0.00372038)
+transform = Transform3D(0.962589, 0.270827, -0.00860281, -0.270697, 0.959728, -0.0750256, -0.0120627, 0.0745332, 0.997147, -0.00730423, -0.00206399, 0.00372038)
 bone_name = "LowerLeg.R_2"
 bone_idx = 61
 
@@ -4302,7 +4300,7 @@ mesh = SubResource("ArrayMesh_ojdjp")
 skeleton = NodePath("")
 
 [node name="Foot_R_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(1, 9.5867e-08, -3.48729e-08, -9.58669e-08, 1, 7.07805e-07, 3.48728e-08, -6.48201e-07, 1, -0.00637997, -0.00191114, 0.00397664)
+transform = Transform3D(1, 9.58682e-08, -5.12615e-08, -9.58682e-08, 1, 7.07805e-07, 5.12614e-08, -6.48201e-07, 1, -0.00637997, -0.00191114, 0.00397664)
 bone_name = "Foot.R_2"
 bone_idx = 66
 
@@ -4343,3 +4341,8 @@ near = 0.001
 
 [node name="AnimationController" type="Node3D" parent="."]
 script = ExtResource("2_vhha5")
+
+[node name="PunchTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="PunchTimer" to="AnimationController" method="_on_punch_timer_timeout"]
