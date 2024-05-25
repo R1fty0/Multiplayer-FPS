@@ -1,10 +1,9 @@
 extends Node3D
 class_name AnimationController
 
-@onready var anim_player = $"../AnimationPlayer"
+@onready var anim_player: AnimationPlayer = $"../AnimationPlayer"
 @onready var anim_state: AnimationState = AnimationState.IDLE
 @onready var punch_timer = $"../PunchTimer"
-@export var punch_anim_duration = 0.833
 
 var is_punching: bool = false 
 
@@ -18,7 +17,7 @@ enum AnimationState
 }
 
 func _ready():
-	punch_timer.wait_time = punch_anim_duration
+	punch_timer.wait_time = anim_player.get_animation("RobotArmature|Robot_Punch").length
 
 func set_anim_state(new_state: AnimationState):
 	if !is_punching:

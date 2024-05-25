@@ -44,7 +44,7 @@ shadow_mesh = SubResource("ArrayMesh_3lumv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ql4b"]
 resource_name = "Main"
-albedo_color = Color(0.791983, 0.576059, 0.216079, 1)
+albedo_color = Color(0.717647, 0.603922, 0.403922, 1)
 metallic = 0.4
 roughness = 0.415087
 
@@ -4201,7 +4201,7 @@ bones/69/rotation = Quaternion(-4.5139e-36, 5.29396e-23, -1.07439e-29, 1)
 bones/69/scale = Vector3(1, 1, 1)
 
 [node name="Foot_L_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(1, 9.58695e-08, -5.20152e-08, -9.58694e-08, 1, 9.08971e-07, 5.20152e-08, -8.49366e-07, 1, 0.00624058, -0.00191114, 0.00397664)
+transform = Transform3D(1, 9.58694e-08, -5.20152e-08, -9.58694e-08, 1, 9.08971e-07, 5.20153e-08, -8.49366e-07, 1, 0.00624058, -0.00191114, 0.00397664)
 bone_name = "Foot.L_2"
 bone_idx = 2
 
@@ -4237,7 +4237,7 @@ mesh = SubResource("ArrayMesh_v1fkb")
 skeleton = NodePath("")
 
 [node name="Arm_L" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.435433, -0.00201552, 0.900219, 0.233061, 0.966156, -0.110568, -0.869529, 0.257951, 0.421166, 0.00265002, -0.00130694, 0.0288456)
+transform = Transform3D(0.435433, -0.00201551, 0.900219, 0.233061, 0.966156, -0.110568, -0.869529, 0.257951, 0.421166, 0.00265002, -0.00130694, 0.0288456)
 bone_name = "Arm.L"
 bone_idx = 16
 
@@ -4255,7 +4255,7 @@ mesh = SubResource("ArrayMesh_pygry")
 skeleton = NodePath("")
 
 [node name="Arm_R" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.101816, 1.86265e-07, -0.202931, 0.0178378, 0.226162, 0.00894992, 0.202146, -0.0199572, 0.101422, -0.0082569, -0.000402434, 0.0201812)
+transform = Transform3D(0.101816, 1.82539e-07, -0.202931, 0.0178378, 0.226162, 0.00894992, 0.202146, -0.0199571, 0.101422, -0.0082569, -0.000402434, 0.0201812)
 bone_name = "Arm.R"
 bone_idx = 36
 
@@ -4273,7 +4273,7 @@ mesh = SubResource("ArrayMesh_k3a4f")
 skeleton = NodePath("")
 
 [node name="LowerLeg_L_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.984156, -0.177236, 0.00489873, 0.177099, 0.981346, -0.074952, 0.00847667, 0.0746192, 0.997178, 0.0068437, -0.00214598, 0.00371967)
+transform = Transform3D(0.984156, -0.177236, 0.00489864, 0.177099, 0.981346, -0.0749514, 0.00847666, 0.0746187, 0.997178, 0.0068437, -0.00214599, 0.00371967)
 bone_name = "LowerLeg.L_2"
 bone_idx = 56
 
@@ -4291,7 +4291,7 @@ mesh = SubResource("ArrayMesh_egxox")
 skeleton = NodePath("")
 
 [node name="LowerLeg_R_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(0.962589, 0.270827, -0.00860281, -0.270697, 0.959728, -0.0750256, -0.0120627, 0.0745332, 0.997147, -0.00730423, -0.00206399, 0.00372038)
+transform = Transform3D(0.962589, 0.270827, -0.00860265, -0.270697, 0.959728, -0.0750251, -0.0120627, 0.0745326, 0.997147, -0.00730423, -0.00206399, 0.00372038)
 bone_name = "LowerLeg.R_2"
 bone_idx = 61
 
@@ -4300,7 +4300,7 @@ mesh = SubResource("ArrayMesh_ojdjp")
 skeleton = NodePath("")
 
 [node name="Foot_R_2" type="BoneAttachment3D" parent="RobotModel/RootNode/RobotArmature/Skeleton3D"]
-transform = Transform3D(1, 9.58682e-08, -5.12615e-08, -9.58682e-08, 1, 7.07805e-07, 5.12614e-08, -6.48201e-07, 1, -0.00637997, -0.00191114, 0.00397664)
+transform = Transform3D(1, 9.58682e-08, -5.12616e-08, -9.58682e-08, 1, 7.07805e-07, 5.12615e-08, -6.48201e-07, 1, -0.00637997, -0.00191114, 0.00397664)
 bone_name = "Foot.R_2"
 bone_idx = 66
 

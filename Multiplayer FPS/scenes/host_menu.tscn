@@ -1,0 +1,200 @@
+[gd_scene load_steps=13 format=3 uid="uid://igxett8itood"]
+
+[ext_resource type="PackedScene" uid="uid://waljnva3xpkx" path="res://scenes/water.tscn" id="1_5mn8r"]
+[ext_resource type="Texture2D" uid="uid://ccjwqdoyt3xgn" path="res://assets/skyboxes/FS002/FS002_Night.png" id="1_om22y"]
+[ext_resource type="FontFile" uid="uid://bv21dxe2argmn" path="res://assets/fonts/raleway/static/Raleway-Black.ttf" id="3_hvc8u"]
+[ext_resource type="FontFile" uid="uid://dag078s5fl4i" path="res://assets/fonts/raleway/static/Raleway-Light.ttf" id="4_frsbl"]
+[ext_resource type="Texture2D" uid="uid://c8f3m1cbx5fm8" path="res://assets/ui/fightFist.png" id="5_chgil"]
+[ext_resource type="Texture2D" uid="uid://msja8ruwvpkb" path="res://assets/ui/flag.png" id="6_3aaef"]
+[ext_resource type="FontFile" uid="uid://bido56lmddgfa" path="res://assets/fonts/raleway/static/Raleway-ExtraBoldItalic.ttf" id="6_4lsei"]
+[ext_resource type="Texture2D" uid="uid://btt0titj1utlu" path="res://assets/ui/target.png" id="6_aghd5"]
+[ext_resource type="FontFile" uid="uid://cpti7ohglkro0" path="res://assets/fonts/raleway/static/Raleway-SemiBold.ttf" id="9_scuxf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ungr7"]
+panorama = ExtResource("1_om22y")
+
+[sub_resource type="Sky" id="Sky_1ople"]
+sky_material = SubResource("PanoramaSkyMaterial_ungr7")
+
+[sub_resource type="Environment" id="Environment_vbdfo"]
+background_mode = 2
+sky = SubResource("Sky_1ople")
+tonemap_mode = 2
+
+[node name="HostMenu" type="CanvasLayer"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vbdfo")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Water" parent="." instance=ExtResource("1_5mn8r")]
+
+[node name="StandardPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -203.0
+offset_right = -192.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StandardPanel"]
+layout_mode = 0
+offset_top = 309.0
+offset_right = 300.0
+offset_bottom = 376.0
+
+[node name="ModeLabel" type="Label" parent="StandardPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hvc8u")
+text = "Brawl
+"
+horizontal_alignment = 1
+
+[node name="ModeDescriptionLabel" type="Label" parent="StandardPanel/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_frsbl")
+text = "Punch your enemies off a progressively shrinking island!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="StandardPanel"]
+layout_mode = 2
+offset_top = 125.0
+offset_right = 300.0
+offset_bottom = 225.0
+texture_normal = ExtResource("5_chgil")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SoccerPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -203.0
+offset_right = 148.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="SoccerPanel"]
+layout_mode = 0
+offset_top = 310.0
+offset_right = 300.0
+offset_bottom = 377.0
+
+[node name="ModeLabel" type="Label" parent="SoccerPanel/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hvc8u")
+text = "Soccer
+"
+horizontal_alignment = 1
+
+[node name="ModeDescriptionLabel" type="Label" parent="SoccerPanel/VBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_frsbl")
+text = "Kick the ball into the opponent's goal to score points to win!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="SoccerPanel"]
+layout_mode = 2
+offset_top = 125.0
+offset_right = 300.0
+offset_bottom = 225.0
+texture_normal = ExtResource("6_aghd5")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="CTFPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 195.0
+offset_top = -203.0
+offset_right = 495.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CTFPanel"]
+layout_mode = 0
+offset_top = 310.0
+offset_right = 300.0
+offset_bottom = 377.0
+
+[node name="ModeLabel" type="Label" parent="CTFPanel/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hvc8u")
+text = "Capture The Flag"
+horizontal_alignment = 1
+
+[node name="ModeDescriptionLabel" type="Label" parent="CTFPanel/VBoxContainer3"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_frsbl")
+text = "Hold onto the flag for as long as you can to win!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="CTFPanel"]
+layout_mode = 2
+offset_top = 125.0
+offset_right = 300.0
+offset_bottom = 225.0
+texture_normal = ExtResource("6_3aaef")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="PromptLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 56.0
+offset_right = 170.0
+offset_bottom = 99.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("6_4lsei")
+theme_override_font_sizes/font_size = 36
+text = "Select A Gamemode"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -161.0
+offset_top = -44.0
+offset_right = -28.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("9_scuxf")
+text = "Host New Game"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj6tl14jnbpjk"]
+
+[ext_resource type="Texture2D" uid="uid://bh2d8xkf3bngr" path="res://assets/ui/gear.png" id="1_4vkcv"]
+
+[node name="SettingsButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_4vkcv")
+flat = true

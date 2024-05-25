@@ -1,4 +1,7 @@
-extends CanvasLayer
+extends Control	
+
+const HOST_SCENE: PackedScene = preload("res://scenes/host_menu.tscn")
+
 
 func _on_host_button_pressed():
 	pass # Replace with function body.

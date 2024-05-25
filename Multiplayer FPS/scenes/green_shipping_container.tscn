@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0ynvshge3vfv"]
+
+[ext_resource type="PackedScene" uid="uid://cwfs7xno1iaje" path="res://assets/models/kenney_boat_kit/cargo-container-c.glb" id="1_4vkxp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cndjv"]
+size = Vector3(1.35376, 1.10489, 2.70715)
+
+[node name="cargo-container-c2" instance=ExtResource("1_4vkxp")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00622559, 0.556108, 0.00933838)
+shape = SubResource("BoxShape3D_cndjv")

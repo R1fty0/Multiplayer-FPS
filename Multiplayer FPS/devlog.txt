@@ -1,2 +1,5 @@
 2024-05-24 (12:51 PM - ):
 	- animation controller works 
+	- made ball work with this video: https://www.youtube.com/watch?v=SJuScDavstM&t=166s
+	- added settings button 
+	- Got Issac to tell me about autoloads, allowing me to create a Cursor_Controller 

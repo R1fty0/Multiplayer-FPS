@@ -21,9 +21,6 @@ extends CharacterBody3D
 var is_walking: bool = false
 var current_speed: float = 0.0
 
-func _ready():
-	# Lock mouse 
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -44,9 +41,6 @@ func _input(event):
 		print("Punch")
 		anim_controller.set_anim_state(anim_controller.AnimationState.PUNCHING)
 	
-	# Quit game.
-	if event.is_action_pressed("quit"):
-		get_tree().quit()
 	
 		
 func _physics_process(delta):
